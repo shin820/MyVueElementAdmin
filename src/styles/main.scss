@@ -1,0 +1,121 @@
+@import './variables.scss';
+
+.clickable {
+  cursor: pointer;
+}
+// .clickable:hover{
+//   color: #409EFF;
+//   text-decoration-color: #409EFF;
+// }
+
+label.vue-treeselect__label {
+  font-weight: 400;
+}
+
+label.vue-treeselect__label .el-tag {
+  vertical-align: middle;
+}
+
+.app-container {
+  padding: 16px;
+  background-color: #ecf0f5;
+
+  .filter-container{
+    background: #fff;
+    width: 100%;
+    padding: 8px 8px 8px 8px;
+    margin-bottom: 16px;
+
+    input.el-range-input{
+      display: inline-block;
+      vertical-align: middle;
+      margin-bottom: 12px;
+    }
+    .el-range-separator{
+        width:6%;
+        display: inline-block;
+        vertical-align: middle;
+        margin-bottom: 10px;
+    }
+  }
+}
+
+.app-container.data-list-container {
+  background-color: #fff;
+  .filter-container {
+    border-radius: none;
+    border-top: none;
+    box-shadow: none;
+    padding: 0px 0px 0px 0px;
+    margin-bottom: 0px;
+  }
+  .el-table{
+    margin-top: 5px;
+  }
+}
+
+.chart-wrapper {
+  border-radius: 3px;
+  border-top: 3px solid #d2d6de;
+  background: #fff;
+  padding: 8px 8px 8px 8px;
+  margin-bottom: 15px;
+  box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+}
+
+/*支持顶部菜单*/
+@if $mainMenuPosition=='top' {
+  #app .main-container{
+    margin-left: 0px;
+  }
+
+  #app .hideSidebar .main-container {
+    margin-left: 0px;
+  }
+
+  .el-menu--horizontal .el-menu-item.is-active {
+    border-bottom: 2px solid transparent;
+    color: #303133;
+  }
+
+  .el-menu--horizontal .el-menu-item {
+    float: left;
+    height: 60px;
+    line-height: 60px;
+    margin: 0;
+    border-bottom: 2px solid transparent;
+    color: #909399;
+  }
+
+  .el-menu--horizontal .el-submenu {
+    float: left;
+  }
+
+  .el-menu--horizontal .el-submenu.is-active .el-submenu__title {
+    border-bottom: 2px solid transparent;
+    color: #303133;
+  }
+
+  .el-menu--horizontal .el-submenu .el-submenu__title {
+    height: 60px;
+    line-height: 60px;
+    border-bottom: 2px solid transparent;
+    color: #909399;
+  }
+
+  .el-menu--horizontal .el-submenu .el-submenu__icon-arrow {
+    position: static;
+    vertical-align: middle;
+    margin-left: 8px;
+    margin-top: -3px;
+  }
+}
+
+div#driver-highlighted-element-stage{
+  opacity: 0.2;
+}
+
+.info-box-icon svg {
+  vertical-align: middle;
+  margin-bottom: 10px;
+}

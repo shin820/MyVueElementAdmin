@@ -1,0 +1,72 @@
+.hideSidebar .menubar {
+  width: 100%;
+}
+
+.menubar {
+  float:left;
+  height: 50px;
+  line-height: 50px;
+  width: calc(100% - #{$sideBarWidth});
+  border-radius: 0px !important;
+  background-color: #3c8dbc;
+  border: none;
+  .hamburger-container {
+    line-height: 58px;
+    height: 50px;
+    float: left;
+    padding: 0 10px;
+  }
+  .breadcrumb-container{
+    float: left;
+  }
+  .errLog-container {
+    display: inline-block;
+    vertical-align: top;
+  }
+  .right-menu {
+    margin-right: 5px;
+    float: right;
+    height: 100%;
+    cursor: pointer;
+    :hover {
+      background: #367fa9
+    }
+    &:focus{
+     outline: none;
+    }
+    .right-menu-item {
+      display: inline-block;
+      padding: 5px 10px;
+      svg {
+        width:15px;
+        height: 15px;
+        color:#fff;
+      }
+    }
+  }
+}
+
+.el-dropdown-menu__item svg{
+  margin-right: 5px
+}
+
+.hideSidebar .menu-header{
+  display:none;
+}
+
+.menu-header{
+  float: left;
+  height: 50px;
+  width: $sideBarWidth;
+  background-color: #367fa9;
+  color:#fff;
+  text-align: center;
+  border: none;
+
+  .portal-name {
+    font-size: 18px;
+    vertical-align: middle;
+    height: 50px;
+    line-height: 50px;
+  }
+}
