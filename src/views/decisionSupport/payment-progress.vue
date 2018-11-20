@@ -39,6 +39,7 @@
         <div class="chart-wrapper">
           <horizontal-bar-chart
             title="各子公司支付进度情况"
+            :xAxisRotate="-10"
             :query="query"
             :dataFunc="getCompanyPaymentStats">
           </horizontal-bar-chart>
@@ -50,6 +51,7 @@
         <div class="chart-wrapper">
           <horizontal-bar-chart
             title="各项目支付进度情况"
+            :xAxisRotate="-10"
             :query="query"
             :dataFunc="getProjectPaymentStats">
           </horizontal-bar-chart>
@@ -61,6 +63,7 @@
         <div class="chart-wrapper">
           <horizontal-bar-chart
             title="各标段支付进度情况"
+            :xAxisRotate="-10"
             :query="query"
             :dataFunc="getSectionPaymentStats">
           </horizontal-bar-chart>

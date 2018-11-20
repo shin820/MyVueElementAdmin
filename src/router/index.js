@@ -94,40 +94,10 @@ export const asyncRouterMap = [
         meta: { title: '项目概况', icon: 'table', keepAlive: true }
       },
       {
-        path: 'map',
-        component: () => import('@/views/project/map'),
-        name: 'project-info-map',
-        meta: { title: '项目地图', icon: 'map-marked-alt', keepAlive: true }
-      },
-      {
         path: 'list',
         component: () => import('@/views/project/list'),
         name: 'project-info-list',
         meta: { title: '项目信息表', icon: 'table', keepAlive: true }
-      },
-      {
-        path: 'weeklyReport',
-        component: () => import('@/views/project/weeklyreport'),
-        name: 'weeklyreport',
-        meta: { title: '项目周报', icon: 'table', keepAlive: true }
-      },
-      {
-        path: 'type-barchart',
-        component: () => import('@/views/project/type-barchart'),
-        name: 'project-type-barchart',
-        meta: { title: '项目类型分析', icon: 'chart-bar', keepAlive: true }
-      },
-      {
-        path: 'phase-barchart',
-        component: () => import('@/views/project/phase-barchart'),
-        name: 'project-phase-barchart',
-        meta: { title: '项目推进情况', icon: 'chart-bar', keepAlive: true }
-      },
-      {
-        path: 'status-barchart',
-        component: () => import('@/views/project/status-barchart'),
-        name: 'project-status-barchart',
-        meta: { title: '建设期项目情况', icon: 'chart-bar', keepAlive: true }
       },
       {
         path: 'projectStats',
@@ -135,141 +105,7 @@ export const asyncRouterMap = [
           import('@/views/decisionSupport/projectProgress/projectStats'),
         name: 'projectStats',
         meta: { title: '项目进度表', icon: 'table', keepAlive: true }
-      },
-      {
-        path: 'investment-balance-barchart',
-        component: () => import('@/views/project/investment-balance-barchart'),
-        name: 'project-investment-balance-barchart',
-        meta: { title: '项目投资节余', icon: 'chart-bar', keepAlive: true }
-      },
-      {
-        path: 'prophase-barchart',
-        component: () => import('@/views/project/prophase-barchart'),
-        name: 'project-prophase-barchart',
-        meta: { title: '项目前期工作', icon: 'chart-bar', keepAlive: true }
-      },
-      {
-        path: 'investment-barchart',
-        component: () => import('@/views/project/investment-barchart'),
-        name: 'project-investment-barchart',
-        meta: { title: '项目投资阶段', icon: 'chart-bar', keepAlive: true }
-      },
-      {
-        path: 'company-barchart',
-        component: () => import('@/views/project/company-barchart'),
-        hidden: true,
-        name: 'project-company-barchart',
-        meta: { title: '子公司项目情况', keepAlive: true }
       }
-      // { path: 'status', component: () => import('@/views/project/status'), name: 'projStatus', meta: { title: '项目状态统计', icon: 'chart-pie', keepAlive: true }},
-      // { path: 'type', component: () => import('@/views/project/type'), name: 'projType', meta: { title: '项目类型统计', icon: 'chart-pie', keepAlive: true }}
-    ]
-  },
-  {
-    path: '/contract',
-    component: Layout,
-    redirect: 'noredirect',
-    name: 'contract',
-    meta: { title: '合同管理', icon: 'file-contract', keepAlive: true },
-    children: [
-      {
-        path: 'overview',
-        component: () => import('@/views/contract/overview'),
-        name: 'contract-overview',
-        meta: { title: '合同概况', icon: 'table', keepAlive: true }
-      },
-      {
-        path: 'list',
-        component: () => import('@/views/contract/list'),
-        name: 'contract-list',
-        meta: { title: '合同信息表', icon: 'table', keepAlive: true }
-      },
-      {
-        path: 'type-barchart',
-        component: () => import('@/views/contract/type-barchart'),
-        name: 'contract-type-barchart',
-        meta: { title: '合同类型分析', icon: 'chart-bar', keepAlive: true }
-      },
-      {
-        path: 'status-barchart',
-        component: () => import('@/views/contract/status-barchart'),
-        name: 'contract-status-barchart',
-        meta: { title: '合同状态分析', icon: 'chart-bar', keepAlive: true }
-      },
-      // { path: 'project-status-barchart', component: () => import('@/views/contract/project-status-barchart'), name: 'contract-project-status-barchart', meta: { title: '建设期合同情况', icon: 'chart-bar', keepAlive: true }},
-      {
-        path: 'alter-contrast-barchart',
-        component: () => import('@/views/contract/alter-contrast-barchart'),
-        name: 'contract-alter-contrast-barchart',
-        meta: { title: '合同与变更对比', icon: 'chart-bar', keepAlive: true }
-      },
-      {
-        path: 'company-barchart',
-        component: () => import('@/views/contract/company-barchart'),
-        hidden: true,
-        name: 'contract-company-barchart',
-        meta: { title: '子公司合同情况', keepAlive: true }
-      }
-    ]
-  },
-  {
-    path: '/alteration',
-    component: Layout,
-    redirect: 'noredirect',
-    name: 'alteration',
-    meta: { title: '变更情况', icon: 'file-invoice-dollar', keepAlive: true },
-    children: [
-      {
-        path: 'list',
-        component: () => import('@/views/alteration/list'),
-        name: 'alter-list',
-        meta: { title: '变更信息表', icon: 'table', keepAlive: true }
-      },
-      {
-        path: 'level-barchart',
-        component: () => import('@/views/alteration/level-barchart'),
-        name: 'alter-level-barchart',
-        meta: { title: '变更等级分析', icon: 'chart-bar', keepAlive: true }
-      },
-      {
-        path: 'type-barchart',
-        component: () => import('@/views/alteration/type-barchart'),
-        name: 'alter-type-barchart',
-        meta: { title: '变更类型分析', icon: 'chart-bar', keepAlive: true }
-      },
-      {
-        path: 'reason-barchart',
-        component: () => import('@/views/alteration/reason-barchart'),
-        name: 'alter-reason-barchart',
-        meta: { title: '变更原因分析', icon: 'chart-bar', keepAlive: true }
-      },
-      {
-        path: 'company-barchart',
-        component: () => import('@/views/alteration/company-barchart'),
-        hidden: true,
-        name: 'alter-company-barchart',
-        meta: { title: '子公司变更情况', keepAlive: true }
-      }
-    ]
-  },
-  {
-    path: '/progress',
-    component: Layout,
-    redirect: 'noredirect',
-    name: 'progress',
-    meta: { title: '项目进度', icon: 'clock', keepAlive: true },
-    children: [
-      {
-        path: 'overview',
-        component: () => import('@/views/progress/overview'),
-        name: 'progress-overview',
-        meta: { title: '项目进度概况', icon: 'clock', keepAlive: true }
-      }
-      // { path: 'progress-stats-barchart', component: () => import('@/views/progress/progress-stats-barchart'), name: 'progress-stats-barchart', meta: { title: '年度投资进度', icon: 'chart-bar', keepAlive: true }},
-      // { path: 'company-complete-piechart', component: () => import('@/views/progress/company-progress-complete-piechart'), name: 'company-progress-complete-piechart', meta: { title: '已完成投资情况', icon: 'chart-pie', keepAlive: true }},
-      // { path: 'company-plan-piechart', component: () => import('@/views/progress/company-progress-plan-piechart'), name: 'company-progress-plan-piechart', meta: { title: '计划投资情况', icon: 'chart-pie', keepAlive: true }},
-      // { path: 'visual-progress-stats-barchart', component: () => import('@/views/progress/visual-progress-stats-barchart'), name: 'visual-progress-stats-barchart', meta: { title: '项目形象进度情况', icon: 'chart-bar', keepAlive: true }},
-      // { path: 'visual-company-progress-piechart', component: () => import('@/views/progress/visual-company-progress-piechart'), name: 'visual-company-progress-piechart', meta: { title: '项目形象进度情况', icon: 'chart-pie', keepAlive: true }}
     ]
   },
   {
@@ -318,19 +154,27 @@ export const asyncRouterMap = [
     ]
   },
   {
+    path: '/progress',
+    component: Layout,
+    redirect: 'noredirect',
+    name: 'progress',
+    meta: { title: '项目进度', icon: 'clock', keepAlive: true },
+    children: [
+      {
+        path: 'overview',
+        component: () => import('@/views/progress/overview'),
+        name: 'progress-overview',
+        meta: { title: '项目进度概况', icon: 'clock', keepAlive: true }
+      }
+    ]
+  },
+  {
     path: '/decisionSupport',
     component: Layout,
     redirect: 'noredirect',
     name: 'decisionSupport',
     meta: { title: '辅助决策', icon: 'balance-scale', keepAlive: true },
     children: [
-      {
-        path: 'payment-contrast-barchart',
-        component: () =>
-          import('@/views/decisionSupport/payment-contrast-barchart'),
-        name: 'payment-contrast-barchart',
-        meta: { title: '计量支付情况', icon: 'table', keepAlive: true }
-      },
       {
         path: 'project-progress-chart',
         component: () =>

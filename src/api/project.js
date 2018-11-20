@@ -24,29 +24,29 @@ export function getGroupProjectList(params) {
   })
 }
 
-export function getWeeklyReport(params) {
-  return request({
-    url: '/api/services/app/ProjectWeeklyReport/getList',
-    method: 'get',
-    params: params
-  })
-}
+// export function getWeeklyReport(params) {
+//   return request({
+//     url: '/api/services/app/ProjectWeeklyReport/getList',
+//     method: 'get',
+//     params: params
+//   })
+// }
 
-export function getStatusCount(params) {
-  return request({
-    url: '/api/services/app/Project/getStatusCount',
-    method: 'get',
-    params: params
-  })
-}
+// export function getStatusCount(params) {
+//   return request({
+//     url: '/api/services/app/Project/getStatusCount',
+//     method: 'get',
+//     params: params
+//   })
+// }
 
-export function getStatusAmount(params) {
-  return request({
-    url: '/api/services/app/Project/getStatusAmount',
-    method: 'get',
-    params: params
-  })
-}
+// export function getStatusAmount(params) {
+//   return request({
+//     url: '/api/services/app/Project/getStatusAmount',
+//     method: 'get',
+//     params: params
+//   })
+// }
 
 // export function getTypeCount(params) {
 //   return request({
@@ -56,37 +56,37 @@ export function getStatusAmount(params) {
 //   })
 // }
 
-export function getTypeAmounts(params) {
-  return request({
-    url: '/api/services/app/ProjectStats/getTypeAmounts',
-    method: 'get',
-    params: params
-  })
-}
+// export function getTypeAmounts(params) {
+//   return request({
+//     url: '/api/services/app/ProjectStats/getTypeAmounts',
+//     method: 'get',
+//     params: params
+//   })
+// }
 
-export function getPhaseAmounts(params) {
-  return request({
-    url: '/api/services/app/ProjectStats/getPhaseAmounts',
-    method: 'get',
-    params: params
-  })
-}
+// export function getPhaseAmounts(params) {
+//   return request({
+//     url: '/api/services/app/ProjectStats/getPhaseAmounts',
+//     method: 'get',
+//     params: params
+//   })
+// }
 
-export function getStatusAmounts(params) {
-  return request({
-    url: '/api/services/app/ProjectStats/getStatusAmounts',
-    method: 'get',
-    params: params
-  })
-}
+// export function getStatusAmounts(params) {
+//   return request({
+//     url: '/api/services/app/ProjectStats/getStatusAmounts',
+//     method: 'get',
+//     params: params
+//   })
+// }
 
-export function getCompanyAmounts(params) {
-  return request({
-    url: '/api/services/app/ProjectStats/getCompanyAmounts',
-    method: 'get',
-    params: params
-  })
-}
+// export function getCompanyAmounts(params) {
+//   return request({
+//     url: '/api/services/app/ProjectStats/getCompanyAmounts',
+//     method: 'get',
+//     params: params
+//   })
+// }
 
 // export function getTypeAmount(params) {
 //   return request({
@@ -111,29 +111,29 @@ export function getDefaultProjectTypes() {
 //   })
 // }
 
-export function getInvestmentBalances(params) {
-  return request({
-    url: '/api/services/app/ProjectStats/getInvestmentBalances',
-    method: 'get',
-    params: params
-  })
-}
+// export function getInvestmentBalances(params) {
+//   return request({
+//     url: '/api/services/app/ProjectStats/getInvestmentBalances',
+//     method: 'get',
+//     params: params
+//   })
+// }
 
-export function getProPhaseAmounts(params) {
-  return request({
-    url: '/api/services/app/ProjectStats/getProPhaseAmounts',
-    method: 'get',
-    params: params
-  })
-}
+// export function getProPhaseAmounts(params) {
+//   return request({
+//     url: '/api/services/app/ProjectStats/getProPhaseAmounts',
+//     method: 'get',
+//     params: params
+//   })
+// }
 
-export function getInvestmentStats(params) {
-  return request({
-    url: '/api/services/app/ProjectStats/getInvestmentStats',
-    method: 'get',
-    params: params
-  })
-}
+// export function getInvestmentStats(params) {
+//   return request({
+//     url: '/api/services/app/ProjectStats/getInvestmentStats',
+//     method: 'get',
+//     params: params
+//   })
+// }
 
 export function getTypeQuantityPieChart(params) {
   return request({

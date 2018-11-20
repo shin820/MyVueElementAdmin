@@ -39,6 +39,7 @@
         <div class="chart-wrapper">
           <horizontal-bar-chart
             title="各子公司投资进度情况"
+            :xAxisRotate="-10"
             :query="query"
             :dataFunc="getCompanyInvestmentStats">
           </horizontal-bar-chart>
@@ -50,6 +51,7 @@
         <div class="chart-wrapper">
           <horizontal-bar-chart
             title="各项目投资进度情况"
+            :xAxisRotate="-10"
             :query="query"
             :dataFunc="getProjectInvestmentStats">
           </horizontal-bar-chart>
@@ -61,6 +63,7 @@
         <div class="chart-wrapper">
           <horizontal-bar-chart
             title="各标段投资进度情况"
+            :xAxisRotate="-10"
             :query="query"
             :dataFunc="getSectionInvestmentStats">
           </horizontal-bar-chart>

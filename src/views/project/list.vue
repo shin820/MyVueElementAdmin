@@ -59,38 +59,20 @@
           </template>
       </el-table-column>
       <el-table-column prop="name" label="项目名称"></el-table-column>
-      <el-table-column label="报表" width="140">
-        <template slot-scope="scope">
-          <el-button :loading="scope.row.loading" type="success" size="mini" @click="handleAmountLedger(scope.row)" icon="el-icon-tickets">费用台账</el-button>
-        </template>
-      </el-table-column>
-      <el-table-column prop="companyName" label="子公司"></el-table-column>
       <el-table-column prop="phaseName" label="阶段">
         <template slot-scope="scope">
-          <span v-if="scope.row.phaseValue&&scope.row.phaseValue==6" class="label label-danger" style="font-size:0.9em">{{scope.row.phaseName}}</span>
-          <span v-if="scope.row.phaseValue&&scope.row.phaseValue==5" class="label label-success" style="font-size:0.9em">{{scope.row.phaseName}}</span>
-          <span v-if="scope.row.phaseValue&&(scope.row.phaseValue!=6&&scope.row.phaseValue!=5)" class="label label-info" style="font-size:0.9em">{{scope.row.phaseName}}</span>
+          <span v-if="scope.row.phaseValue&&scope.row.phaseValue==6" class="label label-danger">{{scope.row.phaseName}}</span>
+          <span v-if="scope.row.phaseValue&&scope.row.phaseValue==5" class="label label-success">{{scope.row.phaseName}}</span>
+          <span v-if="scope.row.phaseValue&&(scope.row.phaseValue!=6&&scope.row.phaseValue!=5)" class="label label-info">{{scope.row.phaseName}}</span>
         </template>
       </el-table-column>
-      <el-table-column prop="statusName" label="项目状态"></el-table-column>
       <el-table-column prop="projectTypeName" label="项目类型"></el-table-column>
-      <el-table-column prop="investmentTypeName" label="投资性质"></el-table-column>
       <el-table-column prop="legalPerson" label="负责人"></el-table-column>
       <el-table-column prop="investmentAmount" label="投资额">
         <template slot-scope="scope">
           <span>{{scope.row.investmentAmount|chineseAmount}}</span>
         </template>
       </el-table-column>
-      <el-table-column prop="roughCalcAmount" label="概算金额">
-        <template slot-scope="scope">
-          <span>{{scope.row.roughCalcAmount|chineseAmount}}</span>
-        </template>
-      </el-table-column>
-      <!-- <el-table-column prop="estimateAmount" label="估算金额">
-        <template slot-scope="scope">
-          <span>{{scope.row.estimateAmount|chineseAmount}}</span>
-        </template>
-      </el-table-column> -->
       <el-table-column prop="startTime" label="开工时间">
         <template slot-scope="scope">
            <span>{{scope.row.startTime|date}}</span>
@@ -102,10 +84,10 @@
         </template>
       </el-table-column>
     </el-table>
-    <!-- <div class="pagination-container">
+    <div class="pagination-container">
       <el-pagination background @size-change="handleSizeChange" @current-change="handleCurrentChange" :current-page="listQuery.page" :page-sizes="[10,20,30, 50]" :page-size="listQuery.limit" layout="total, sizes, prev, pager, next, jumper" :total="total">
       </el-pagination>
-    </div> -->
+    </div>
   </div>
 </template>
 
@@ -114,8 +96,7 @@ import OrganizationUnitTreeSelect from '@/components/OrganizationUnitTreeSelect'
 import { getGroupProjectList, getDefaultProjectTypes } from '@/api/project'
 import {
   getProjectPhases,
-  getProjectStatuses,
-  getContractTypes
+  getProjectStatuses
 } from '@/api/dataDict'
 
 export default {
@@ -197,20 +178,14 @@ export default {
       getGroupProjectList(this.listQuery).then(response => {
         this.projects = response.data
         this.loading = false
+        this.total = response.data.length
       })
     },
-    handleSizeChange() {},
-    handleCurrentChange() {},
-    handleAmountLedger(row) {
-      var reportServerUrl = 'http://test'
-      var projectId = row.id
-      this.$set(row, 'loading', true)
-      getContractTypes(projectId).then(res => {
-        this.$set(row, 'loading', false)
-        var dictIdsString = res.data.map(t => t.id).join(',')
-        var url = `${reportServerUrl}?reportlet=Project_Payment_Ledger.cpt&projectId=${projectId}&contractTypeIds=${dictIdsString}&op=view`
-        window.open(url)
-      })
+    handleSizeChange() {
+      this.handleFilter()
+    },
+    handleCurrentChange() {
+      this.handleFilter()
     }
   }
 }

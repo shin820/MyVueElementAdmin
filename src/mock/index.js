@@ -81,10 +81,17 @@ Mock.mock(/\/api\/services\/app\/QualitySafety\/getPagedIssueList/, 'get', quali
 Mock.mock(/\/api\/services\/app\/inspectionStats\/getQuantityStats/, 'get', inspectionAPI.getQuantityStats)
 Mock.mock(/\/api\/services\/app\/inspectionStats\/getCompanyQuantityStats/, 'get', inspectionAPI.getCompanyQuantityStats)
 Mock.mock(/\/api\/services\/app\/inspectionStats\/getProjectQuantityStats/, 'get', inspectionAPI.getProjectQuantityStats)
+Mock.mock(/\/api\/services\/app\/inspectionStats\/getSectionQuantityStats/, 'get', inspectionAPI.getSectionQuantityStats)
 Mock.mock(/\/api\/services\/app\/inspectionStats\/getGradeStats/, 'get', inspectionAPI.getGradeStats)
 Mock.mock(/\/api\/services\/app\/inspectionStats\/getProblemClassStats/, 'get', inspectionAPI.getProblemClassStats)
 Mock.mock(/\/api\/services\/app\/inspectionStats\/getCompanyStats/, 'get', inspectionAPI.getCompanyStats)
 Mock.mock(/\/api\/services\/app\/inspectionStats\/getCompanyGradeStats/, 'get', inspectionAPI.getCompanyGradeStats)
+Mock.mock(/\/api\/services\/app\/inspectionStats\/getProjectGradeStats/, 'get', inspectionAPI.getProjectGradeStats)
+Mock.mock(/\/api\/services\/app\/inspectionStats\/getSectionGradeStats/, 'get', inspectionAPI.getProjectGradeStats)
+Mock.mock(/\/api\/services\/app\/inspectionStats\/getCompanyStatList/, 'get', inspectionAPI.getCompanyStatList)
+Mock.mock(/\/api\/services\/app\/inspectionStats\/getProjectStatList/, 'get', inspectionAPI.getProjectStatList)
+Mock.mock(/\/api\/services\/app\/inspectionStats\/getSectionStatList/, 'get', inspectionAPI.getProjectStatList)
+Mock.mock(/\/api\/services\/app\/inspectionStats\/getPagedIssueList/, 'get', inspectionAPI.getPagedIssueList)
 
 // 进度
 Mock.mock(/\/api\/services\/app\/progressStats\/getVisualProgressPieChart/, 'get', progressStatsAPI.getVisualProgressPieChart)
